@@ -1,0 +1,26 @@
+
+replicaCount: 1
+
+image:
+  repository: smitatuscano/go-web-app
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "v1"
+
+
+ingress:
+  # Specifies whether a service account should be created
+  enabled: false
+  # Automatically mount a ServiceAccount's API credentials?
+  className: ""
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  hosts:
+    - host: chart-example.local 
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
+
