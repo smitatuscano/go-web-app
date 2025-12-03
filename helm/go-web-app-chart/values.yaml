@@ -5,7 +5,7 @@ image:
   repository: smitatuscano/go-web-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1"
+  tag: "19883632093"
 
 
 ingress:
